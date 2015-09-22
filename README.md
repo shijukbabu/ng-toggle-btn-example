@@ -7,6 +7,7 @@ AngularJS Directive for switch toggle button with styles.
 [Demo Here](http://plnkr.co/edit/oUxD3vgUsnM2Hrgd2cA4?p=preview)
 
 **Usage**
+<br>
 Add dependency to app.
 
 `angular.module('moduleName', ['ng-toggle.btn']);`
