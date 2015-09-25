@@ -1,6 +1,25 @@
 (function() {
     'use strict';
     
+    var moduleTpls = window.angular.module('ng-breadcrumb-tpls', []);
+
+    moduleTpls.value('$breadcrumbConsts', {
+        template: 'breadcrumb/breadcrumb.html'
+    });
+
+    moduleTpls.run(['$templateCache', '$breadcrumbConsts',
+        function($templateCache, $breadcrumbConsts) {
+            $templateCache.put($breadcrumbConsts.template, '' +
+            		' <ol class="breadcrumb"> ' +
+            		' 	<li ng-repeat="crumb in breadcrumbs" ng-class="{ active: $last }"> ' +
+            		'		<a ui-sref="{{ crumb.route }}" ng-if="!$last">{{ crumb.displayName}}&nbsp;</a> ' +
+            		'		<span ng-show="$last">{{ crumb.displayName }}</span> ' +
+            		'	</li> ' +
+			        ' </ol> ' +
+                '');
+        }
+    ]);
+    
     var module = window.angular.module('ng-breadcrumb', ['ui.router', 'ng-breadcrumb-tpls']);
     
     module.directive('ngBreadcrumb', ['$interpolate', '$breadcrumbConsts', '$state', function($interpolate, $breadcrumbConsts, $state) {
