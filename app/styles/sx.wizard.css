@@ -1,0 +1,119 @@
+/* Modal Wizard - Styles - START */
+.wizard-header, .wizard-body {
+	padding: 10px;
+}
+
+.step-container {
+	/* margin-top: 20px; */
+	min-height: 300px;
+	max-height: 300px;
+	overflow-y: auto;
+}
+
+.wizard-breadcrumb {
+	height: auto;
+	padding: 0;
+	list-style: none;
+	margin-top: 2px;
+}
+
+/*.wizard-breadcrumb:before {
+ 	position: absolute;
+  	height: 1px;
+  	background-color: #020101;
+  	content: '';
+  	right: 30%;
+    left: 0%;
+    top: 35%;
+} */
+
+.wizard-breadcrumb li {
+	position: relative;
+	float: left;
+	line-height: 15px;
+	text-align: center;
+	margin: 0;
+	min-height: 50px;
+	height: auto !important;
+	padding-bottom: 5px;
+	/*border-bottom: 1px solid #e6e6e6;*/
+}
+
+/* .wizard-breadcrumb:before {
+	position: absolute;
+    height: 1px;
+    background-color: #e6e6e6;
+    content: '';
+	right: calc(0%);
+    left: calc(0%);
+} */
+
+.wizard-breadcrumb li a {
+	font-weight: bold;
+	color: #808080;
+	text-decoration: none;
+	transition: 0.25s;
+}
+
+.wizard-breadcrumb li a .wizard-step-number {
+	color: #FFFFFF;
+	background-color: darkgray;
+	border-radius: 100%;
+	display: block;
+	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+	padding: 12px 0 0 0;
+	width: 40px;
+	height: 40px;
+	margin: 0 auto;
+	font-size: xx-large;
+}
+
+.wizard-breadcrumb li.entered:NOT(.active ) a {
+	cursor: pointer;
+}
+
+.wizard-breadcrumb li.entered a .wizard-step-number {
+	background-color: #000000;
+}
+
+.wizard-breadcrumb li.completed a .wizard-step-number {
+	background-color: #4e9a06;
+}
+
+.step-title {
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.shadow {
+	z-index: 1099;
+	left: 0;
+	top: 0;
+	display: block;
+	overflow: hidden;
+	position: absolute;
+	outline: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(255, 255, 255, .65);
+}
+
+.outer {
+	display: table;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+}
+
+.middle {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.inner {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Modal Wizard - Styles - END */
